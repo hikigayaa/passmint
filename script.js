@@ -8,12 +8,23 @@ const uppercaseCheckbox = document.getElementById('uppercase');
 const lowercaseCheckbox = document.getElementById('lowercase');
 const numbersCheckbox = document.getElementById('numbers');
 const symbolsCheckbox = document.getElementById('symbols');
+const toggleVisibilityBtn = document.getElementById('toggleVisibility');
 
 // Character Sets
 const UPPERCASE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const LOWERCASE_CHARS = 'abcdefghijklmnopqrstuvwxyz';
 const NUMBER_CHARS = '0123456789';
 const SYMBOL_CHARS = '!@#$%^&*';
+
+// Toggle password visibility
+toggleVisibilityBtn.addEventListener('click', () => {
+    const type = passwordOutput.type === 'password' ? 'text' : 'password';
+    passwordOutput.type = type;
+    toggleVisibilityBtn.classList.toggle('show-password');
+    toggleVisibilityBtn.setAttribute('aria-label', 
+        type === 'password' ? '显示密码' : '隐藏密码'
+    );
+});
 
 // Update length value display
 lengthSlider.addEventListener('input', () => {

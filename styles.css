@@ -48,6 +48,41 @@ h2 {
     border-radius: 0.5rem;
     background: #f7fafc;
     color: #2d3748;
+    padding-right: 6rem;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    opacity: 0.8;
+}
+
+.eye-icon {
+    fill: #4a5568;
+}
+
+.eye-icon .eye-closed {
+    display: none;
+}
+
+.toggle-btn.show-password .eye-open {
+    display: none;
+}
+
+.toggle-btn.show-password .eye-closed {
+    display: block;
 }
 
 #copyButton {
